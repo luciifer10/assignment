@@ -12,8 +12,13 @@ import 'package:flutter/material.dart';
 class MainDrawer extends StatefulWidget {
   final String username;
   final String email;
+  final String pUniqueId;
 
-  const MainDrawer({Key? key, required this.username, required this.email})
+  const MainDrawer(
+      {Key? key,
+        required this.username,
+        required this.email,
+        required this.pUniqueId})
       : super(key: key);
 
   @override
@@ -56,17 +61,6 @@ class _MainDrawerState extends State<MainDrawer> {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  // ListTile(
-                  //   leading: const Icon(Icons.logout),
-                  //   title: const Text("Logout"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => const LoginScreen()));
-                  //   },
-                  // ),
                   ListTile(
                     leading: const Icon(Icons.person),
                     title: const Text('Profile'),
@@ -88,7 +82,6 @@ class _MainDrawerState extends State<MainDrawer> {
                       );
                     },
                   ),
-
                   ListTile(
                     leading: const Icon(Icons.leaderboard),
                     title: const Text("Leads"),
@@ -97,7 +90,10 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LeadsScreen(username: '', email: '',)),
+                            builder: (context) => LeadsScreen(
+                              username: widget.email,
+                              email: widget.email,
+                            )),
                       );
                     },
                   ),
@@ -110,8 +106,8 @@ class _MainDrawerState extends State<MainDrawer> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => HomeScreen(
-                            username: '',
-                            email: '',
+                            username: widget.username,
+                            email: widget.email,
                           ),
                         ),
                       );
@@ -125,7 +121,10 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const KeywordRanking(username: '', email: '',)));
+                              builder: (context) => KeywordRanking(
+                                username: widget.username,
+                                email: widget.email,
+                              )));
                     },
                   ),
                   ListTile(
@@ -136,7 +135,10 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const MasterAnalytics(username: '', email: '',)));
+                              builder: (context) => MasterAnalytics(
+                                username: widget.username,
+                                email: widget.email,
+                              )));
                     },
                   ),
                   ListTile(
@@ -147,7 +149,10 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TechnicalAspect(username: '', email: '')));
+                              builder: (context) => TechnicalAspect(
+                                username: widget.username,
+                                email: widget.email,
+                              )));
                     },
                   ),
                   ListTile(
@@ -158,7 +163,10 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SummaryReport(username: '', email: '')));
+                              builder: (context) => SummaryReport(
+                                username: widget.username,
+                                email: widget.email,
+                              )));
                     },
                   ),
                   ListTile(
@@ -169,7 +177,10 @@ class _MainDrawerState extends State<MainDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SeoSubmission(username: '', email: '')));
+                              builder: (context) => SeoSubmission(
+                                username: widget.username,
+                                email: widget.email,
+                              )));
                     },
                   ),
                   ListTile(

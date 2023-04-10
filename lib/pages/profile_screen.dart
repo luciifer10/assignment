@@ -30,6 +30,7 @@ class ProfileScreen extends StatefulWidget {
     try {
       http.Response response = await http.post(
         Uri.parse('https://design23.ilogicx.com/seo_html/Api/Profile.php'),
+        // body: {pUniqueId = uniqueid}
       );
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body.toString());
@@ -56,7 +57,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       drawer: MainDrawer(
         username: widget.username,
-        email: widget.email,
+        email: widget.email, pUniqueId: '',
       ),
       appBar: AppBar(
         backgroundColor: Colors.red,

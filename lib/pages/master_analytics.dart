@@ -27,7 +27,7 @@ class _MasterAnalyticsState extends State<MasterAnalytics> {
           backgroundColor: Colors.transparent,
           drawer: MainDrawer(
             username: widget.username,
-            email: widget.email,
+            email: widget.email, pUniqueId: '',
           ),
           appBar: AppBar(
             backgroundColor: Colors.red,

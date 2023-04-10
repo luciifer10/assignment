@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.grey,
           drawer: MainDrawer(
             username: widget.username,
-            email: widget.email,
+            email: widget.email, pUniqueId: '',
           ),
           appBar: AppBar(
             backgroundColor: Colors.red,

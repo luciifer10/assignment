@@ -25,7 +25,7 @@ class _SummaryReportState extends State<SummaryReport> {
           backgroundColor: Colors.transparent,
           drawer: MainDrawer(
             username: widget.username,
-            email: widget.email,
+            email: widget.email, pUniqueId: '',
           ),
           appBar: AppBar(
             backgroundColor: Colors.red,

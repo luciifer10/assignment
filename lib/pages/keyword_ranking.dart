@@ -81,7 +81,7 @@ class _KeywordRankingState extends State<KeywordRanking> {
     return Scaffold(
       drawer: MainDrawer(
         username: widget.username,
-        email: widget.email,
+        email: widget.email, pUniqueId: '',
       ),
       appBar: AppBar(
         backgroundColor: Colors.red,
