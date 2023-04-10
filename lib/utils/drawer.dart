@@ -56,17 +56,17 @@ class _MainDrawerState extends State<MainDrawer> {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  ListTile(
-                    leading: const Icon(Icons.logout),
-                    title: const Text("Logout"),
-                    onTap: () {
-                      Navigator.of(context).pop();
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginScreen()));
-                    },
-                  ),
+                  // ListTile(
+                  //   leading: const Icon(Icons.logout),
+                  //   title: const Text("Logout"),
+                  //   onTap: () {
+                  //     Navigator.of(context).pop();
+                  //     Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //             builder: (context) => const LoginScreen()));
+                  //   },
+                  // ),
                   ListTile(
                     leading: const Icon(Icons.person),
                     title: const Text('Profile'),
@@ -89,89 +89,89 @@ class _MainDrawerState extends State<MainDrawer> {
                     },
                   ),
 
-                  // ListTile(
-                  //   leading: const Icon(Icons.leaderboard),
-                  //   title: const Text("Leads"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //           builder: (context) => const LeadsScreen()),
-                  //     );
-                  //   },
-                  // ),
-                  // ListTile(
-                  //   leading: const Icon(Icons.home),
-                  //   title: const Text("Home Page"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.pushReplacement(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //         builder: (context) => HomeScreen(
-                  //           username: username,
-                  //           email: email,
-                  //         ),
-                  //       ),
-                  //     );
-                  //   },
-                  // ),
-                  // ListTile(
-                  //   leading: const Icon(Icons.camera_alt),
-                  //   title: const Text("Keyword Ranking"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => const KeywordRanking()));
-                  //   },
-                  // ),
-                  // ListTile(
-                  //   leading: const Icon(Icons.image),
-                  //   title: const Text("Master Analytics"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => const MasterAnalytics()));
-                  //   },
-                  // ),
-                  // ListTile(
-                  //   leading: const Icon(Icons.video_call_outlined),
-                  //   title: const Text("Technical Aspects Of Website"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => const TechnicalAspect()));
-                  //   },
-                  // ),
-                  // ListTile(
-                  //   leading: const Icon(Icons.summarize),
-                  //   title: const Text("Summary Reports"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => const SummaryReport()));
-                  //   },
-                  // ),
-                  // ListTile(
-                  //   leading: const Icon(Icons.share),
-                  //   title: const Text("SEO Submissions"),
-                  //   onTap: () {
-                  //     Navigator.of(context).pop();
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => const SeoSubmission()));
-                  //   },
-                  // ),
+                  ListTile(
+                    leading: const Icon(Icons.leaderboard),
+                    title: const Text("Leads"),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LeadsScreen(username: '', email: '',)),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.home),
+                    title: const Text("Home Page"),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(
+                            username: '',
+                            email: '',
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.camera_alt),
+                    title: const Text("Keyword Ranking"),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const KeywordRanking(username: '', email: '',)));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.image),
+                    title: const Text("Master Analytics"),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MasterAnalytics(username: '', email: '',)));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.video_call_outlined),
+                    title: const Text("Technical Aspects Of Website"),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TechnicalAspect(username: '', email: '')));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.summarize),
+                    title: const Text("Summary Reports"),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SummaryReport(username: '', email: '')));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.share),
+                    title: const Text("SEO Submissions"),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SeoSubmission(username: '', email: '')));
+                    },
+                  ),
                   ListTile(
                     leading: const Icon(Icons.logout),
                     title: const Text("Logout"),
